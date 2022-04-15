@@ -1,2 +1,13 @@
-# coin-market
-Cryptocurrency website build with React, React router dom v6, Styled-components, and CoinGecko API
+# E-COIN
+
+Cryptocurrency website build with React, React router dom v6, styled-components, and CoinGecko API
+
+### [Live Demo](https://asaad8756.github.io/e-coin/)
+
+## Screenshots
+
+![App Screenshot](src/assets/screenshots/dark.png)
+
+![App Screenshot](src/assets/screenshots/light.png)
+
+![App Screenshot](src/assets/screenshots/responsive.png)
