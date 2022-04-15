@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/e-coin/static/css/main.1db6c040.css",
+    "main.js": "/e-coin/static/js/main.e3bf58c6.js",
+    "static/media/dark.png": "/e-coin/static/media/dark.d2cf9f3fe656d2f8bbc2.png",
+    "static/media/slick.svg": "/e-coin/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/e-coin/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/e-coin/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/e-coin/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/e-coin/index.html",
+    "main.1db6c040.css.map": "/e-coin/static/css/main.1db6c040.css.map",
+    "main.e3bf58c6.js.map": "/e-coin/static/js/main.e3bf58c6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1db6c040.css",
+    "static/js/main.e3bf58c6.js"
+  ]
+}
