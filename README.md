@@ -1,4 +1,4 @@
-# E-COIN
+# ECOIN
 
 Cryptocurrency website build with React, React router dom v6, styled-components, and CoinGecko API
 
@@ -9,5 +9,3 @@ Cryptocurrency website build with React, React router dom v6, styled-components,
 ![App Screenshot](src/assets/screenshots/dark.png)
 
 ![App Screenshot](src/assets/screenshots/light.png)
-
-![App Screenshot](src/assets/screenshots/responsive.png)
