@@ -1,21 +1,18 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Button, Container } from '../../GlobalStyles'
+import { Button, Container, Heading, SubHeading, Text } from '../../GlobalStyles'
 import Card from '../coins/Card'
 import { 
   InfoContainer, 
   InfoRow, 
   InfoColumn, 
   TextWrapper, 
-  TopLine, 
-  Heading, 
-  Subtitle, 
   ImgWrapper,
   Img,
 } from './Section.styles'
 
-export const InfoSection = ({ lightBg, imgStart, lightTextDesc, lightTopLine, lightText, heading, primary, description, buttonLabel, topLine, img}) => {
+export const InfoSection = ({ lightBg, imgStart, lightTextDesc, lightSubHeading, lightText, heading, primary, description, buttonLabel, subHeading, img, upperCase, opacity }) => {
 
   const [data, setData] = useState(null)
 
@@ -34,23 +31,23 @@ export const InfoSection = ({ lightBg, imgStart, lightTextDesc, lightTopLine, li
   if (!data) return null;
 
   return (
-    <>
-      <InfoContainer lightBg={lightBg}>
-        <Container>
-          <InfoRow imgStart={imgStart}>
-            <InfoColumn>
-              <TextWrapper>
-                <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
-                <Heading lightText={lightText}>{heading}</Heading>
-                <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-                <Link to='/coins'>
-                  <Button big fontBig primary={primary}>
-                    {buttonLabel}
-                  </Button>
-                </Link>
-              </TextWrapper>
-            </InfoColumn>
-            <InfoColumn>
+    <InfoContainer lightBg={lightBg}>
+      <Container>
+        <InfoRow imgStart={imgStart}>
+          <InfoColumn>
+            <TextWrapper>
+              <SubHeading opacity={opacity} upperCase={upperCase} lightSubHeading={lightSubHeading}>{subHeading}</SubHeading>
+              <Heading lightText={lightText}>{heading}</Heading>
+              <Text lightTextDesc={lightTextDesc}>{description}</Text>
+              <Link to='/sign-up'>
+                <Button big fontBig primary={primary}>
+                  {buttonLabel}
+                </Button>
+              </Link>
+            </TextWrapper>
+          </InfoColumn>
+          <InfoColumn>
+            <ImgWrapper>
               {img ? (
                 <ImgWrapper>
                   <Img src={img} alt="" />
@@ -62,10 +59,10 @@ export const InfoSection = ({ lightBg, imgStart, lightTextDesc, lightTopLine, li
                   ))}
                 </ImgWrapper>
               )}
-            </InfoColumn>
-          </InfoRow>
-        </Container>
-      </InfoContainer> 
-    </>
+            </ImgWrapper>
+          </InfoColumn>
+        </InfoRow>
+      </Container>
+    </InfoContainer> 
   )
 }

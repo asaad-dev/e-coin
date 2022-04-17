@@ -5,6 +5,8 @@ import { Coins } from "./components/coins/Coins";
 import { Coin } from "./pages/coin/Coin";
 import { Home } from "./pages/home-page/Home";
 import { Featured } from "./pages/features/Featured"
+import { SignUp } from "./pages/sign-up/SignUp";
+import { SignIn } from "./pages/sign-up/SignIn";
 
 function App () {
 
@@ -18,6 +20,8 @@ function App () {
           <Route path=':coinId' element={<Coin />} />
         </Route>
         <Route path='/features' element={<Featured />} />
+        <Route path='/sign-up' element={<SignUp />} />
+        <Route path='/sign-in' element={<SignIn />} />
       </Routes>
       <Footer />
     </>

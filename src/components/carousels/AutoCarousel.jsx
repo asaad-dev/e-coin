@@ -40,7 +40,7 @@ const AutoCarousel = () => {
       slidesToShow: 3,
       slidesToScroll: 3,
       autoplay: true,
-      speed: 7000,
+      speed: 10000,
       autoplaySpeed: 1000,
       cssEase: "linear",
       initialSlide: 0,
@@ -48,8 +48,8 @@ const AutoCarousel = () => {
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
+            slidesToShow: 1,
+            slidesToScroll: 1,
             initialSlide: 2
           }
         },

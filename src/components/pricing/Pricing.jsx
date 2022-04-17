@@ -1,10 +1,10 @@
 import { Button } from '../../GlobalStyles'
 import { GiReceiveMoney, GiCutDiamond, GiCapitol } from 'react-icons/gi';
 import { IconContext } from 'react-icons/lib';
+import { SubHeading } from '../../GlobalStyles';
 import {
   PricingSection,
   PricingWrapper,
-  PricingHeading,
   PricingContainer,
   PricingCard,
   PricingCardInfo,
@@ -21,7 +21,7 @@ export const Pricing = () => {
     <IconContext.Provider value={{ color: '#a9b3c1', size: 64 }}>
       <PricingSection>
         <PricingWrapper>
-          <PricingHeading>Services</PricingHeading>
+          <SubHeading>Services</SubHeading>
           <PricingContainer>
             <PricingCard to='/sign-up'>
               <PricingCardInfo>

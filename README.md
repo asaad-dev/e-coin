@@ -8,4 +8,3 @@ Cryptocurrency website build with React, React router dom v6, styled-components,
 
 ![App Screenshot](src/assets/screenshots/dark.png)
 
-![App Screenshot](src/assets/screenshots/light.png)

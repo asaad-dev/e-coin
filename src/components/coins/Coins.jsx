@@ -4,7 +4,15 @@ import { useState, useEffect } from 'react'
 import { CoinItem } from './CoinItem'
 import { Container, SubHeading } from '../../GlobalStyles'
 import { Coin } from '../../pages/coin/Coin'
-import { HeaderContainer, Text} from './Coins.styles'
+import { 
+    CoinContainer,
+    SearchWrapper,
+    SearchBtn,
+    SearchIcon,
+    SearchInput,
+    HeaderContainer, 
+    Text
+} from './Coins.styles'
 
 export const Coins = () => {
     const [coins, setCoins] = useState([]);
@@ -19,22 +27,30 @@ export const Coins = () => {
     
   return (
     <Container>
-        <SubHeading>Search</SubHeading>
-        <HeaderContainer>
-            <Text>#</Text>
-            <Text marginLeft>Coin</Text>
-            <Text marginLeft>Price</Text>
-            <Text marginLeft>24h</Text>
-            <Text>Volume</Text>
-            <Text>Mkt Cap</Text>
-        </HeaderContainer>
-        {coins.map(coins => {
-            return (
-                <Link to={`/coin/${coins.id}`} element={<Coin />}>
-                    <CoinItem coins={coins} key={coins.id} />
-                </Link>
-            );
-        })}
+        <CoinContainer>
+            <SubHeading>Search</SubHeading>
+            <SearchWrapper>
+                <SearchInput placeholder="Search..." type="text" />
+                <SearchBtn>
+                    <SearchIcon />
+                </SearchBtn>
+            </SearchWrapper>
+            <HeaderContainer>
+                <Text>#</Text>
+                <Text marginLeft>Coin</Text>
+                <Text marginLeft>Price</Text>
+                <Text marginLeft>24h</Text>
+                <Text>Volume</Text>
+                <Text>Mkt Cap</Text>
+            </HeaderContainer>
+            {coins.map(coins => {
+                return (
+                    <Link to={`/coin/${coins.id}`} element={<Coin />}>
+                        <CoinItem coins={coins} key={coins.id} />
+                    </Link>
+                );
+            })}
+        </CoinContainer>
     </Container>
   )
 }

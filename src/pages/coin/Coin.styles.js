@@ -1,4 +1,20 @@
 import styled from 'styled-components'
+import { Button } from '../../GlobalStyles';
+
+export const ContentWrapper = styled.div`
+    padding: 70px 0;
+    background: ${({ lightBg }) => (lightBg ? '#fff' : '#101522')};
+
+
+    @media screen and (max-width: 768px) {
+        padding: 30px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+`;
 
 export const Content = styled.div`
     max-width: 740px;
@@ -11,15 +27,10 @@ export const Content = styled.div`
     border-radius: 8px;
 `;
 
-export const Rank = styled.div`
+export const RankBtn = styled(Button)`
     margin: .5rem 0;
-`;
+    width: 100px;
 
-export const RankBtn = styled.span`
-    border: 1px solid #6900ff;
-    background: #6900ff;
-    border-radius: 8px;
-    padding: .3rem .4rem;
 `;
 
 export const Info = styled.div`
@@ -48,6 +59,13 @@ export const StatsContainer = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
     width: 100%;
+
+    @media screen and (max-width: 768px) {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
 `;
 
 export const StatsRow = styled.div`
@@ -60,21 +78,45 @@ export const StatsRow = styled.div`
 
 export const StatsText = styled.p`
     color: #d3d3d3;
+    margin: 0 30px;
 `;
 
 export const Table = styled.table`
     margin: .5rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    @media screen and (max-width: 768px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+`;
+
+export const Tr = styled.tr`
+    width: 100%;
+
+     @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 `;
 
 export const Td = styled.td`
-    padding: 8px;
+    padding: 1rem;
     text-align: center;
 `;
 
 export const Th = styled.th`
-    padding: 8px;
+    padding: .5rem 1.6rem;
     text-align: center;
     background-color: #333;
+    font-weight: 700;
 `;
 
 export const About = styled.div`
@@ -82,11 +124,8 @@ export const About = styled.div`
 
     p {
         opacity: 70%;
-        line-height: 1.5;
-        word-spacing: 1.5;
-    }
-    h3 {
-        margin: 1rem 0;
-        font-size: 1.4rem;
+        line-height: 1.7;
+        word-spacing: 1.7;
+        letter-spacing: 1.1;
     }
 `;

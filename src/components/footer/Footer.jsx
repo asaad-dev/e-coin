@@ -24,14 +24,14 @@ export const Footer = () => {
                 <FooterText>
                     Join our exclusive membership to receive the latest news and trends
                 </FooterText>
-                <FooterText opacity fontFamily>You can unsubscribe at any time.</FooterText>
+                <FooterText opacity>You can unsubscribe at any time.</FooterText>
                 <Form>
                     <FormInput 
                         name='email'
                         type='email'
                         placeholder='Your Email'
                     />
-                    <Button fontBig>Subscribe</Button>
+                    <Button big fontBig>Subscribe</Button>
                 </Form>
             </FooterLinksItems>
             <FooterLinksItems>

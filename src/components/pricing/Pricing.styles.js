@@ -2,10 +2,18 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const PricingSection = styled.div`
-    padding: 4rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 70px 0;
+
+    @media screen and (max-width: 768px) {
+        padding: 30px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 `;
 
 export const PricingWrapper = styled.div`
@@ -15,7 +23,6 @@ export const PricingWrapper = styled.div`
     margin: 0 auto;
 
     @media screen and (max-width: 960px) {
-        margin: 0 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -24,9 +31,13 @@ export const PricingWrapper = styled.div`
     }
 `;
 
-export const PricingHeading = styled.h1`
+export const PricingHeading = styled.h2`
     font-size: 3rem;
     margin-bottom: 24px;
+
+     @media screen and (max-width: 768px) {
+        font-size: 2.5rem;        
+    }
 `;
 
 export const PricingContainer = styled.div`

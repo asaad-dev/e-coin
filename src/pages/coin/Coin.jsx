@@ -2,11 +2,11 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import DOMPurify from 'dompurify';
-import { Heading } from '../../GlobalStyles';
+import { Heading, SubHeading } from '../../GlobalStyles';
 import { Img } from '../../components/coins/Coins.styles';
 import {
+    ContentWrapper,
     Content, 
-    Rank, 
     RankBtn, 
     Info, 
     InfoHeading, 
@@ -17,7 +17,7 @@ import {
     StatsText,
     About,
     Table,
-    Th, Td
+    Th, Td, Tr,
 } from './Coin.styles';
 
 export const Coin = () => {
@@ -34,11 +34,9 @@ export const Coin = () => {
     },)
 
   return (
-    <>
+    <ContentWrapper>
         <Content>
-            <Rank>
-                <RankBtn>Rank # {coin.market_cap_rank}</RankBtn>
-            </Rank>
+            <RankBtn>Rank # {coin.market_cap_rank}</RankBtn>
             <Heading>{coin.name}</Heading>
         </Content>
         <Content>
@@ -56,24 +54,24 @@ export const Coin = () => {
         <Content>
             <Table>
                 <thead>
-                    <tr>
+                    <Tr>
                         <Th>1h</Th>
                         <Th>24h</Th>
                         <Th>7d</Th>
                         <Th>14d</Th>
                         <Th>30d</Th>
-                        <Th>1y</Th>
-                    </tr>
+                        <Th>1year</Th>
+                    </Tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <Tr>
                         <Td>{coin.market_data?.price_change_percentage_1h_in_currency ? <p>{coin.market_data.price_change_percentage_1h_in_currency.usd.toFixed(1)}%</p> : null}</Td>
                         <Td>{coin.market_data?.price_change_percentage_24h_in_currency ? <p>{coin.market_data.price_change_percentage_24h_in_currency.usd.toFixed(1)}%</p> : null}</Td>
                         <Td>{coin.market_data?.price_change_percentage_7d_in_currency ? <p>{coin.market_data.price_change_percentage_7d_in_currency.usd.toFixed(1)}%</p> : null}</Td>
                         <Td>{coin.market_data?.price_change_percentage_14d_in_currency ? <p>{coin.market_data.price_change_percentage_14d_in_currency.usd.toFixed(1)}%</p> : null}</Td>
                         <Td>{coin.market_data?.price_change_percentage_30d_in_currency ? <p>{coin.market_data.price_change_percentage_30d_in_currency.usd.toFixed(1)}%</p> : null}</Td>
                         <Td>{coin.market_data?.price_change_percentage_1y_in_currency ? <p>{coin.market_data.price_change_percentage_1y_in_currency.usd.toFixed(1)}%</p> : null}</Td>
-                    </tr>
+                    </Tr>
                 </tbody>
             </Table>
         </Content>
@@ -99,13 +97,13 @@ export const Coin = () => {
         </Content>
         <Content>
             <About>
-                <h3>About</h3>
+                <SubHeading>About</SubHeading>
                 <p dangerouslySetInnerHTML={{
                     __html: DOMPurify.sanitize(coin.description ? coin.description.en : ''),
                     }}>
                 </p>
             </About>
         </Content>
-    </>
+    </ContentWrapper>
   )
 }

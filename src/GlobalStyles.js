@@ -23,33 +23,59 @@ const GlobalStyle = createGlobalStyle`
 
 export const Container = styled.div`
     z-index: 1;
-    width: 100vw;
+    width: 100%;
     max-width: 100vw;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 30px;
 
-    @media screen and (max-width: 991px) {
-        padding: 0 30px;
-    }
 `;
 
 export const Heading = styled.h1`
-    text-align: center;
-    margin: 1rem;
+    font-size: 3rem;
+    margin: 1.75rem 0;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    max-width: 550px;
+    color: ${({lightText}) => (lightText ? '#f7f8fa' : '#1c2237')};
+    text-align: ${({alignCenter}) => (alignCenter ? 'center' : 'start')};
+
+     @media screen and (max-width: 768px) {
+        font-size: 2rem;        
+    }
 `;
 
 export const SubHeading = styled.h2`
-    font-size: 2rem;
-    text-align: center;
-    padding: 1rem 0;
-`
+    font-size: 2.2rem;
+    line-height: 1.1;
+    word-spacing: 1px;
+    margin: 1.75rem 0;
+    max-width: 550px;
+    color: ${({lightSubHeading}) => (lightSubHeading ? '#000' : '#fff')};
+    text-transform: ${({upperCase}) => (upperCase ? 'uppercase' : 'normal')};
+    opacity: ${({opacity}) => (opacity ? '80%' : '100%')};
+
+    @media screen and (max-width: 768px) {
+        font-size: 2rem;        
+    }
+`;
+
+export const Text = styled.p`
+    max-width: 500px;
+    margin-bottom: 35px;
+    font-size: 1rem;
+    line-height: 32px;
+    font-size: 1.5rem;
+    color: ${({lightTextDesc}) => (lightTextDesc ? '#a9b3c1' : '#1c2237')};
+    opacity: ${({opacity}) => (opacity ? '50%' : '100%')};
+`;
 
 export const Button = styled.button`
     border-radius: 4px;
     white-space: nowrap;
     color: #fff;
     background: ${({primary}) => (primary ? '#4B59F7' : '#0467FB')};
-    padding: ${({big}) => (big ? '12px 64px' : '10px 20px')};
+    padding: ${({big}) => (big ? '12px 34px' : '10px 20px')};
     font-size: ${({fontBig}) => (fontBig ? '20px' : '16px')};
     outline: none;
     border: none;
